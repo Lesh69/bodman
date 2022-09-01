@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973905691636",
+    "project_id": "bodman-one-point-eight",
+    "storage_bucket": "bodman-one-point-eight.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973905691636:android:7a5053de2492901c946fa1",
+        "android_client_info": {
+          "package_name": "com.example.bodman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973905691636-7uvq2g7gaq8dlgp3t4d9pnbrbq6pv8bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLYuNpD7Qv8Y5vgsPGz01ucvNp5TuoRQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973905691636-7uvq2g7gaq8dlgp3t4d9pnbrbq6pv8bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
