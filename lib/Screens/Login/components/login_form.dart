@@ -1,3 +1,5 @@
+import 'package:bodman/ui.dart';
+import 'package:bodman/verified.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,7 +12,6 @@ class LoginForm extends StatefulWidget {
   const LoginForm({
     Key? key,
   }) : super(key: key);
-
   @override
   State<LoginForm> createState() => _LoginFormState();
 }
@@ -55,7 +56,7 @@ class _LoginFormState extends State<LoginForm> {
                       hintText: "Your email",
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(defaultPadding),
-                        child: Icon(Icons.person),
+                        child: Icon(Icons.email),
                       ),
                     ),
                   ),
@@ -81,6 +82,11 @@ class _LoginFormState extends State<LoginForm> {
                     tag: "login_btn",
                     child: ElevatedButton(
                       onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => const MyWidget()),
+                            ));
                         final email = _email.text;
                         final password = _password.text;
                         FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -112,7 +118,7 @@ class _LoginFormState extends State<LoginForm> {
               ),
             );
           default:
-            return const Text("loading...");
+            return const Text("");
         }
       },
     );

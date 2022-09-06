@@ -65,9 +65,11 @@ class _SignUpFormState extends State<SignUpForm> {
                     keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.next,
                     cursorColor: kPrimaryColor,
-                    onSaved: (name) {},
+                    onSaved: (name) {
+                      (_name);
+                    },
                     decoration: const InputDecoration(
-                      hintText: "FULL NAME...",
+                      hintText: "FullName...",
                       prefixIcon: Padding(
                         padding: EdgeInsets.all(defaultPadding),
                         child: const Icon(Icons.person),
@@ -94,8 +96,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           const EdgeInsets.symmetric(vertical: defaultPadding),
                       child: TextFormField(
                           controller: _age,
-                          keyboardType:
-                              TextInputType.numberWithOptions(signed: true),
+                          keyboardType: TextInputType.datetime,
                           textInputAction: TextInputAction.next,
                           cursorColor: kPrimaryColor,
                           onSaved: (age) {},
@@ -103,7 +104,7 @@ class _SignUpFormState extends State<SignUpForm> {
                               hintText: "AGE....",
                               prefixIcon: const Padding(
                                 padding: EdgeInsets.all(defaultPadding),
-                                child: const Icon(Icons.email),
+                                child: const Icon(Icons.date_range),
                               )))),
                   Padding(
                     padding:
